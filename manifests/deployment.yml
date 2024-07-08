@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: subahanctlterraformguides 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subahanctlterraformguides
+  template:
+    metadata:
+      labels:
+        app: subahanctlterraformguides 
+    spec:
+      containers:
+        - name: subahanctlterraformguides 
+          image: myowwnacr2010.azurecr.io/subahanctlterraformguides
+          ports:
+          - containerPort: 6379
